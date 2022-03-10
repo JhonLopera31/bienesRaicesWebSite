@@ -15,9 +15,8 @@ const webp =require('gulp-webp');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const avif = require('gulp-avif');
-//svg
-const svg = require('gulp-svgmin');
- 
+//svg-copy
+const svgcopy = require('gulp-copy');// No svg-images minification is required.
 const path = {
     scss: 'src/scss/**/*.scss',
     css: 'build/css/app.css',
@@ -81,9 +80,9 @@ function imgAvif(){
 }
  
  
-function imgSvg(){
+function imgSvgcopy(){
     return src(path.svg)
-        .pipe(svg())
+        .pipe(svgcopy(''))
         .pipe(dest('build/img'));
 }
  
@@ -94,4 +93,4 @@ function autoCompile(){
     watch(path.img, parallel(imgAvif,imgWebp,imageMin));
 }
  
-exports.default = parallel(compileSass,compileJS,autoCompile,imgAvif,imageMin,imgWebp)
+exports.default = parallel(compileSass,compileJS,autoCompile,imgAvif,imageMin,imgWebp,imgSvgcopy)
