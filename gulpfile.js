@@ -16,7 +16,7 @@ const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const avif = require('gulp-avif');
 //svg-copy
-const svgcopy = require('gulp-copy');// No svg-images minification is required.
+//const svgcopy = require('gulp-copy');// No svg-images minification is required.
 const path = {
     scss: 'src/scss/**/*.scss',
     css: 'build/css/app.css',
@@ -82,7 +82,7 @@ function imgAvif(){
  
 function imgSvgcopy(){
     return src(path.svg)
-        .pipe(svgcopy(''))
+        //.pipe(svgcopy(''))
         .pipe(dest('build/img'));
 }
  
