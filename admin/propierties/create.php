@@ -11,17 +11,17 @@ $result = mysqli_query($db, $query); // this way can present security issues, so
 $errores = []; //errors messages array
 $titulo = $precio = $descripcion = $habitaciones = $wc = $estacionamientos = $vendedorId = "";
 
-//Exequte code after submit the form
+//Execute code after submit the form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-    $titulo = $_POST["titulo"];
-    $precio = $_POST["precio"];
-    $descripcion = $_POST["descripcion"];
-    $habitaciones = $_POST["habitaciones"];
-    $wc = $_POST["wc"];
-    $estacionamientos = $_POST["estacionamientos"];
+    //data sanitization for mysqli
+    $titulo = mysqli_real_escape_string($db, $_POST["titulo"]);
+    $precio = mysqli_real_escape_string($db, $_POST["precio"]);
+    $descripcion = mysqli_real_escape_string($db, $_POST["descripcion"]);
+    $habitaciones = mysqli_real_escape_string($db, $_POST["habitaciones"]);
+    $wc = mysqli_real_escape_string($db, $_POST["wc"]);
+    $estacionamientos = mysqli_real_escape_string($db, $_POST["estacionamientos"]);
     $creado = date('Y/m/d');
-    $vendedorId = $_POST["vendedor"];
+    $vendedorId = mysqli_real_escape_string($db, $_POST["vendedor"]);
 
     if (!isset($titulo) || trim($titulo) == '') {
         $errores[] = "Debes Añadir un titulo";
