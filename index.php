@@ -1,6 +1,6 @@
 <?php
 require "includes/functions.php"; // Require is better for functions
-IncludeTemplate("header", true); // include name, if main page
+include_template("header", true); // include name, if main page
 ?>
 
 <main class="contenedor seccion">
@@ -197,4 +197,4 @@ IncludeTemplate("header", true); // include name, if main page
     </section>
 </div>
 
-<?php IncludeTemplate("footer");?>
+<?php include_template("footer");?>

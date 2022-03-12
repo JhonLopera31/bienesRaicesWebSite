@@ -1,6 +1,6 @@
 <?php
 require "includes/functions.php"; // Require is better for functions
-IncludeTemplate("header") // include name, if main page
+include_template("header") // include name, if main page
 ?>
 
 <main class="contenedor seccion">
@@ -68,4 +68,4 @@ IncludeTemplate("header") // include name, if main page
         <input type="submit" value="Enviar" class="boton-verde">
     </form>
 </main>
-<?php IncludeTemplate("footer");?>
+<?php include_template("footer");?>
