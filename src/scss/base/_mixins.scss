@@ -1,5 +1,5 @@
 /** Media Queries **/
-@use 'sass:math';
+@use "sass:math";
 
 @mixin telefono {
     @media (min-width: #{$telefono}) {
@@ -12,30 +12,30 @@
         @content;
     }
 }
-  
+
 @mixin desktop {
     @media (min-width: #{$desktop}) {
         @content;
     }
 }
-@mixin grid($columnas, $espaciado ) {
+@mixin grid($columnas, $espaciado) {
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
 
-@mixin boton ($bgcolor, $display) {
+@mixin boton($bgcolor, $display) {
     background-color: $bgcolor;
     color: $blanco;
     font-weight: $bold;
     text-decoration: none;
     padding: 1rem 3rem;
     text-align: center;
-    margin-top: math.div($separacion,2);
+    margin-top: math.div($separacion, 2);
     display: $display;
     border: none;
-    &:hover{
-        background-color: darken($bgcolor,5);
+    &:hover {
+        background-color: darken($bgcolor, 5);
         cursor: pointer;
     }
 }
