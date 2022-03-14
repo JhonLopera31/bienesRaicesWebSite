@@ -16,8 +16,8 @@
         
         .contenido-header{
             @include tablet {
-                height: 100vh;
-                min-height: 60rem;
+                //height: 95vh;
+                min-height: 55rem;
             }
         }
     }

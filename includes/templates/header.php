@@ -34,5 +34,6 @@
                 </div>
             </div> <!-- barra -->
 
+            <?php echo $MainPage? "<h1>Venta de Casas Y Departamentos de Lujo</h1>":'';?>
         </div>
     </header>
