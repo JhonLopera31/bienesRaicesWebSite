@@ -16,7 +16,8 @@
 table.propiedades {
     margin-top: 4rem;
     width: 100%;
-    border-spacing: 0;
+    border-spacing:0.5rem;
+
 
     thead{
         background-color: $verde;
@@ -26,13 +27,26 @@ table.propiedades {
             text-align: center;
         }
     }
+    
     td{
         text-align: center;
+        vertical-align: middle;
+        img{ 
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
     }
 
-    img{
+    .imagen-tabla{
         width: 10rem;
     }
 
 
+}
+
+.imagen-small{
+    width: 20rem;
 }
