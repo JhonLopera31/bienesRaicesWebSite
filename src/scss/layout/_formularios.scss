@@ -24,9 +24,11 @@
         background-color: $blanco;
         border: 1px solid $gris;
         border-radius: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
-
+    input:last-of-type {
+        margin-bottom: 0rem;
+      }
     textarea{
         height: 20rem;
     }

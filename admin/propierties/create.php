@@ -2,6 +2,11 @@
 require '../../includes/config/database.php';
 require '../../includes/functions.php';
 
+$auth = is_auth();
+if (!$auth) {
+    header("Location: /");
+}
+
 $db = connect_db(); // data base connection
 
 $query = "SELECT * FROM vendedores"; //get data from mysql

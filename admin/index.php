@@ -1,5 +1,11 @@
 <?php
 
+require '../includes/functions.php';
+$auth = is_auth();
+if (!$auth) {
+    header("Location: /");
+}
+
 require '../includes/config/database.php';
 // loading data base to show the registered propierties
 $db = connect_db(); // connect to db
@@ -27,7 +33,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-require '../includes/functions.php';
 include_template("header");
 ?>
 
